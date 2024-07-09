@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Jurídico Contable Curzi</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <script src="js/empleados.js" defer></script>
+    <script src="js/inflacion.js" defer></script>
+    <script src="js/idemnifinal.js" defer></script>
+    <script src="js/inflaciondatos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" type="images.png" href="images/2.png">
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="content">
+    <header>
+        <div class="sombras">
+            <div class="sombra s1"></div>
+            <div class="sombra s2"></div>
+            <div class="sombra s3"></div>
+            <div class="sombra s4"></div>
+            <div class="sombra s5"></div>
+        </div>
+        <div class="header-content">
+            <img src="images/2.png" alt="Logotipo" class="logo">
+            <h1>Estudio Jurídico Contable Curzi</h1>
+            <p>Soluciones Integrales para su Empresa</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#QuienesSomos">Quiénes Somos</a>
+        <a href="#services">Servicios</a>
+        <a href="#calculadora">Calculadora de Idemnizaciones</a>
+        <a href="#Inflacion">Calculadora de Inflacion</a>
+        <a href="#miembros">Nuestros Integrantes</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    
+    <div class="container">
+        <section id="QuienesSomos" class="QuienesSomos">
+            <h2>Quiénes Somos</h2>
+            
+            <div class="intro">
+                <h4>Bienvenidos al Estudio Jurídico Contable Curzi. Somos un equipo multidisciplinario de profesionales dedicados a ofrecer soluciones integrales en las áreas legal y contable. Nuestro objetivo es brindar a nuestros clientes el soporte necesario para gestionar sus asuntos jurídicos y financieros de manera eficiente y efectiva.</h4>
+            </div>
+    
+            <div class="historia">
+                <h3>Nuestra Historia</h3>
+                <p>Desde nuestra fundación, hemos trabajado con una amplia variedad de clientes, desde pequeñas y medianas empresas hasta grandes corporaciones, proporcionando asesoramiento personalizado y adaptado a las necesidades específicas de cada uno. Nuestra misión es ser un aliado estratégico para nuestros clientes, ayudándoles a navegar por el complejo entorno legal y contable con confianza y seguridad.</p>
+            </div>
+    
+            <div class="equipo">
+                <h3>Nuestro Equipo</h3>
+                <p>Nuestro equipo está compuesto por abogados y contadores altamente capacitados y experimentados, comprometidos con la excelencia profesional y el desarrollo continuo. Nos enorgullecemos de nuestra ética de trabajo, nuestra atención al detalle y nuestro compromiso con la satisfacción del cliente.</p>
+            </div>
+    
+            <div class="valores">
+                <h3>Nuestros Valores</h3>
+                <p>En el Estudio Jurídico Contable Curzi, valoramos la transparencia, la integridad y la dedicación. Nos esforzamos por construir relaciones duraderas con nuestros clientes, basadas en la confianza mutua y el respeto. Creemos firmemente que el éxito de nuestros clientes es nuestro éxito, y trabajamos incansablemente para alcanzar los mejores resultados posibles.</p>
+            </div>
+    
+            <div class="servicios" id="services">
+                <h3>Nuestros Servicios</h3>
+                <p>Ya sea que necesite asesoramiento legal, consultoría contable, planificación fiscal, auditorías financieras o gestión de recursos humanos, estamos aquí para ayudarle. Nuestro enfoque integral y nuestro conocimiento profundo de las normativas vigentes nos permiten ofrecer soluciones completas y efectivas.</p>
+                <ul>
+                    <li>Asesoramiento Jurídico</li>
+                    <li>Consultoría Contable</li>
+                    <li>Planificación Fiscal</li>
+                    <li>Auditorías Financieras</li>
+                    <li>Gestión de Recursos Humanos</li>
+                </ul>
+            </div>
+    
+            <div class="confianza">
+                <h3>Confianza</h3>
+                <p>Confíe en nosotros para ser su socio de confianza en todas sus necesidades legales y contables. En el Estudio Jurídico Contable Curzi, su éxito es nuestra prioridad.</p>
+            </div>
+        </section>
+    </div>
+    
+    <section class="calculadora">
+        <h2>A continuacion les vamos a facilitar algunas herramientas para que puedan solucionar sus inquietudes</h2>
+    </section>
+
+        <h2>Calculadora de Indemnizaciones</h2>
+
+            <p>Nuestra calculadora de indemnizaciones está diseñada para ayudar a empleados y empleadores a calcular de manera rápida y precisa las indemnizaciones por despido. Introduce los detalles de tu empleo, y obtén un estimado basado en la legislación vigente. Esta herramienta simplifica el proceso, asegurando transparencia y claridad en situaciones laborales delicadas.</p>
+
+        <section class="calculadora" id="calculadora">
+            <h2>Calculadora de Indemnizaciones</h2>
+            <p>Ingrese su mejor salario bruto:</p> 
+            <input type="number" id="salario" value="0" min="0" max="1000000" step="2500">
+            
+            <p>Ingrese años trabajados:</p>
+            <input type="number" id="anios" value="1" min="1" max="60" step="1">
+    
+            <p><label for="despido">¿Su despido fue por fallecimiento del trabajador o del empleador?</label></p>
+            <select id="despido">
+                <option selected disabled>Seleccionar...</option>
+                <option value="si">Si</option>
+                <option value="no">No</option>
+            </select>
+    
+            <div class="button-container">
+                <button id="calcularBtn" class="button button-outline">Calcular Indemnización</button>
+            </div>
+            
+            <div class="center separador">
+                <p class="importe">Indemnización esperada: $
+                    <span id="valorIdemnizacion">0.00</span>
+                    <span id="btnverultimaidemnizacion" title="Ver última Indemnización">🔍</span> 
+                </p>
+            </div>
+            <div id="notificar"></div>
+        </section>
+
+        <h2>Calculadora de Inflación Argentina 2014 Enero - 2024 Abril </h2>
+
+            <p>La Calculadora de Inflación Argentina te permite conocer cómo varían los precios y el poder adquisitivo en el país a lo largo del tiempo. Con esta herramienta, podrás:</p>
+
+                <ul>
+                    <li>Calcular la inflación acumulada entre dos fechas específicas.</li>
+                    <li>Comparar el valor de una cantidad de dinero en diferentes momentos históricos.</li>
+                    <li>Ajustar salarios, ahorros y precios para reflejar la inflación.</li>
+                </ul>
+
+            <p>Diseñada para ser fácil de usar y precisa, nuestra calculadora utiliza los datos más recientes del Instituto Nacional de Estadística y Censos (INDEC) para brindarte resultados confiables. Ideal para economistas, empresarios, estudiantes y cualquier persona interesada en entender mejor la economía argentina.</p>
+
+            <section class="calculadora" id="Inflacion">
+                <h2>Calculadora de Inflacion Argentina</h2>
+                <p>Ingrese el precio del producto, inmueble o capital inicial:</p> 
+                <input type="number" id="precioInicial" value="0" min="0" max="1000000" step="2500">
+                
+                <p>Ingrese fecha de inicio:</p>
+                <input type="date" id="fechaInicio">
+        
+                <p>Ingrese fecha de fin:</p>
+                <input type="date" id="fechaFin">
+        
+                <div class="button-container">
+                    <button id="calcularBt" class="button button-outline">Calcular</button>
+                </div>
+                
+                <div class="center separador">
+                    <p class="importe">Precio ajustado por inflación: $
+                        <span id="precioFinal">0.00</span> 
+                    </p>
+                </div>
+                <div class="center separador">
+                    <p class="importe">Inflación acumulada: 
+                        <span id="inflacionAcumulada">0.00%</span>
+                    </p>
+                </div>
+                <div id="notificar"></div>
+            </section>
+
+
+
+        <h2 class="center">Nuestros Integrantes</h2>
+        <section class="empleados" id="miembros">
+
+            <button class="prev" onclick="prevEmployee()">&#10094;</button>
+            <div class="empleado-container">
+                <div class="empleado active" id="empleado1">
+                    <img src="images/214.jpg" alt="Dr. Osvaldo Angel Curzi">
+                    <h2>Dr. Osvaldo Angel Curzi</h2>
+                    <p>Abogado</p>
+                    <p>osvaldo@gmail.com</p>
+                    <p>011-40718431</p>
+                </div>
+                <div class="empleado" id="empleado2">
+                    <img src="images/214.jpg" alt="C.P. Camila Curzi">
+                    <h2>C.P. Camila Curzi</h2>
+                    <p>Contadora Pública</p>
+                    <p>cami@gmail.com</p>
+                    <p>011-40718431</p>
+                </div>
+                <div class="empleado" id="empleado2">
+                    <img src="images/214.jpg" alt="C.P. Camila Curzi">
+                    <h2>Vivana Reno</h2>
+                    <p>Contadora Pública</p>
+                    <p>vivi@gmail.com</p>
+                    <p>011-40718431</p>
+                </div>
+                <div class="empleado" id="empleado2">
+                    <img src="images/214.jpg" alt="C.P. Camila Curzi">
+                    <h2>Lautaro Pilaria</h2>
+                    <p>Ingeniero AeroEspacial</p>
+                    <p>andr@gmail.com</p>
+                    <p>011-40718431</p>
+                </div>
+                <div class="empleado" id="empleado2">
+                    <img src="images/214.jpg" alt="C.P. Camila Curzi">
+                    <h2>As. Silvina Palacios</h2>
+                    <p>Asistente</p>
+                    <p>sil@gmail.com</p>
+                    <p>011-40718431</p>
+                </div>
+            </div>
+            <button class="next" onclick="nextEmployee()">&#10095;</button>
+        </section>
+
+        <section>
+            <h1>Reseñas de Clientes</h1>
+            <div class="carousel-container">
+                <button class="button1" id="prevBtn">&lt;</button>
+                <div class="carousel">
+                    <div id="reviews" class="reviews"></div>
+                </div>
+                <button class="button1" id="nextBtn">&gt;</button>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="heading">Deje su<span> Consulta</span></h2>
+            
+            <form action="https://formsubmit.co/curziignacio@gmail.com" method="POST">
+    
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" name="Full Name">
+                    <input type="email" placeholder="Email" name="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number" name="Number">
+                    <input type="text" placeholder="Subject" name="Text">
+                </div>
+    
+                <textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </section>
+
+        <section id="contact" class="contact" >
+            <h2>Contacto</h2>
+            <p>Para más información o para agendar una consulta, por favor contáctenos a través de los siguientes medios:</p>
+            <p>Teléfono: (123) 456-7890</p>
+            <p>Email: contacto@curziestudio.com</p>
+            <p>Dirección: Tapia de Cruz 392, Belen de Escobar, Argentina</p>
+        </section>
+        <p>.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Estudio Jurídico Contable Curzi. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
